@@ -48,7 +48,7 @@ function rerender() {
       const fullCount = document.createElement("p");
       allorderContainer.append(fullCost, fullCount);
       fullCost.innerText = `Full cost: ${read_local().reduce(
-        (sum, item) => sum + Number(item.productPrice),
+        (sum, item) => sum + Number(item.productPrice*item.productCount),
         0
       )} $`
       fullCount.innerText = `Full count: ${read_local().reduce(
